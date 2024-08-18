@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadeh Baghomian</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to ensure the page scrolls to the top on load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
+        });
+
+        // JavaScript to move the overlay GIF on scroll
+        window.addEventListener('scroll', () => {
+            const gif = document.querySelector('.overlay-gif');
+            const scrollPosition = window.scrollY;
+            gif.style.transform = `translateY(${scrollPosition * 0.5}px)`;  // Adjust the factor to control speed
+        });
+    </script>
+</head>
+<body>
+    <img src="small-gif.gif" alt="Small GIF" class="overlay-gif">
+    <header>
+        <div class="logo">🚀 Fadeh Baghomian</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Welcome</h1>
+        <p>Explore my work!</p>
+        <a href="https://github.com/FadehBaghomian" class="social-link">GitHub</a>
+    </section>
+
+    <section id="portfolio">
+        <h2>Current Projects</h2>
+        <div class="portfolio-item">
+            <h3>Login and account manager</h3>
+            <p>A fully operational login and account manager has features such as account registration, CAPTCHA, and password strength.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Pentagonal Trapezohedron</h3>
+            <p>A rotating Pentagonal Trapezohedron was created using a python turtle.</p>
+        </div>
+        <!-- Add more projects here -->
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate Computer Engineering student with a strong foundation in both IT and programming. My aspirations have motivated me to understand technology in many ways, such as game development and real-world problem-solving.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via the platforms below:</p>
+        <ul class="socials">
+            <li><a href="https://www.instagram.com/fadeh_music/?next=%2F"> Instagram</a></li>
+            <li><a href="https://x.com/FadehBaghomian">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/fadeh-baghomian-76a5181a9/">LinkedIn</a></li>
+            <!-- Add more social links here -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 This is not copyrighted do whatever you want I guess...</p>
+    </footer>
+</body>
+</html>
+
+
+
+
