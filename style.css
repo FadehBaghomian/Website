@@ -10,17 +10,12 @@ body {
     min-height: 100vh;
     text-align: center;
     background: url('space-background.gif') center/cover no-repeat fixed;
+    animation: backgroundAnimation 0.033s steps(1) infinite;
 }
 
-.overlay-gif {
-    position: absolute;
-    top: 720px;
-    left: 30px;
-    width: 200px;
-    height: auto;
-    z-index: 2;
-    opacity: 0.8;
-    transition: transform 0.1s ease-out; /* Smooths the movement */
+@keyframes backgroundAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
 }
 
 header {
@@ -49,6 +44,12 @@ nav a {
     color: #89CFF0; /* Baby Blue */
     font-weight: bold; /* Bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds thickness */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+nav a:hover {
+    color: #ffffff; /* Highlight color on hover */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Light shadow on hover */
 }
 
 #hero {
@@ -127,6 +128,12 @@ h2::after {
     padding: 0.5rem;
     border-radius: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds thickness */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.socials a:hover {
+    color: #ffffff; /* Highlight color on hover */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Light shadow on hover */
 }
 
 footer {
@@ -135,4 +142,28 @@ footer {
     color: #888;
     width: 100%;
     border-radius: 10px;
+}
+
+/* Overlay GIF that moves while scrolling */
+.overlay-gif {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    background: url('overlay.gif') center/cover no-repeat;
+    animation: moveOverlay 3s linear infinite;
+}
+
+@keyframes moveOverlay {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
