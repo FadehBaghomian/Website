@@ -79,6 +79,12 @@ nav a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds thickness */
     display: inline-block; /* Aligns the link properly */
     margin-top: 1rem; /* Adds some spacing */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+#hero .social-link:hover {
+    color: #ffffff; /* Highlight color on hover */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Light shadow on hover */
 }
 
 #about, #portfolio, #contact {
@@ -136,34 +142,25 @@ h2::after {
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Light shadow on hover */
 }
 
+.project-link {
+    text-decoration: none;
+    color: #89CFF0; /* Baby Blue */
+    font-weight: bold; /* Bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds thickness */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.project-link:hover {
+    color: #ffffff; /* Highlight color on hover */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Light shadow on hover */
+}
+
 footer {
-    text-align: center;
-    padding: 1rem;
-    color: #888;
     width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
     border-radius: 10px;
-}
-
-/* Overlay GIF that moves while scrolling */
-.overlay-gif {
-    position: fixed;
-    top: 10%;
-    left: 5%;
-    width: 200px;
-    height: 200px;
-    z-index: 10;
-    background: url('overlay.gif') center/cover no-repeat;
-    animation: moveOverlay 3s linear infinite;
-}
-
-@keyframes moveOverlay {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #ffffff;
 }
